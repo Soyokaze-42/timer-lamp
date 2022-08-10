@@ -27,7 +27,7 @@ ENCODER_PIN_CLK = board.D9
 ENCODER_DIVISOR = 2  # Depends on the encoder used
 
 
-class moon_lamp:
+class lamp:
     "Lamp-timer with asyncio"
 
     def __init__(self):
@@ -160,4 +160,4 @@ class moon_lamp:
 
 
 if __name__ == "__main__":
-    moon_lamp().run()
+    lamp().run()
