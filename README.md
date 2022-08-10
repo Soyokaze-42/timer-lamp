@@ -13,6 +13,7 @@ Hardware:
     - BUTTON_PIN
     - ENCODER_PIN_DT
     - ENCODER_PIN_CLK
+
 NOTE: You can change the pins around to suit your micro and needs, but the DT/CLK pins need to be consecutive.
 
 Installation:
