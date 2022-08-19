@@ -5,7 +5,7 @@ When it is powered on, it pulses. each click in the encoder adds 5 seconds to th
 Once the button is pressed, the timer starts. Then pushing the button changes the color that will be changed when the
 encoder is turned, briefly flashing that color after the button has been pressed.
 
-Use a roatary encoder for BUTTON_PIN and the two ENCODER_PINs.
+Use a rotary encoder for BUTTON_PIN and the two ENCODER_PINs.
 Use neopixels on pin PIXELS_PIN with count PIXELS_COUNT.
 """
 
@@ -53,7 +53,7 @@ class lamp:
         print(self.timeout, self.countdown)
 
     async def update_color(self, delta):
-        """Update the currnet color (self.rgb) by delta without going unter 0 or over 255.
+        """Update the current color (self.rgb) by delta without going under 0 or over 255.
 
         Args:
             delta (int): the size and direction of the change in color.
@@ -72,7 +72,7 @@ class lamp:
         old_color = 0
         with neopixel.NeoPixel(PIXELS_PIN, PIXELS_COUNT, auto_write=True) as neopixels:
             while not self.exit:
-                # Update color and brighness
+                # Update color and brightness
                 if old_color == self.current_color:
                     neopixels.brightness = self.brightness
                     neopixels.fill(self.rgb)
@@ -160,4 +160,5 @@ class lamp:
 
 
 if __name__ == "__main__":
+    print(f"Alarm wake up: {alarm.wake_alarm}")
     lamp().run()
